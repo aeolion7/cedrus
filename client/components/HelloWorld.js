@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+// Stateful component template
 
-export default class HelloWorld extends Component {
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+class HelloWorld extends Component {
   constructor(props) {
     super(props);
   }
@@ -9,3 +12,18 @@ export default class HelloWorld extends Component {
     return <div>Hello, world!</div>;
   }
 }
+
+/*
+
+const mapStateToProps = state => {
+  return {};
+};
+
+const mapDispatchToProps = dispatch => {
+  return {};
+};
+
+*/
+
+export default HelloWorld;
+// export default connect(mapStateToProps, mapDispatchToProps)(HelloWorld);
