@@ -2,8 +2,10 @@
   "name": "nerd-plate",
   "version": "1.0.0",
   "description": "A lightweight full stack boilerplate using Node, Express, React, Redux, and Sequelize.",
-  "main": "index.js",
+  "main": "./client/app.js",
   "scripts": {
+    "start": "node server",
+    "start-dev": "webpack -w & nodemon server/app.js",
     "test": "test"
   },
   "repository": {
@@ -19,5 +21,20 @@
   "bugs": {
     "url": "https://github.com/aeolion7/nerds-plate/issues"
   },
-  "homepage": "https://github.com/aeolion7/nerds-plate#readme"
+  "homepage": "https://github.com/aeolion7/nerds-plate#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.4.2",
+    "express": "^4.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "volleyball": "^1.5.1"
+  }
 }
