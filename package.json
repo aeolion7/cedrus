@@ -1,0 +1,23 @@
+{
+  "name": "nerd-plate",
+  "version": "1.0.0",
+  "description": "A lightweight full stack boilerplate using Node, Express, React, Redux, and Sequelize.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeolion7/nerds-plate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "nerdsplate"
+  ],
+  "author": "Joseph Lionarons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aeolion7/nerds-plate/issues"
+  },
+  "homepage": "https://github.com/aeolion7/nerds-plate#readme"
+}
