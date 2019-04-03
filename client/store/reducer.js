@@ -1,13 +1,13 @@
 /* action constants
-const TEST = 'TEST';
+  const TEST = 'TEST';
 */
 
 /* action creators
-export const testReducer = () => {
-  return {
-    type: TEST,
+  export const testReducer = () => {
+    return {
+      type: TEST,
+    };
   };
-};
 */
 
 // initial state
