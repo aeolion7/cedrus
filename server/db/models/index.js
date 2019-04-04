@@ -2,6 +2,7 @@
   const Dog = require('./dog');
   const Owner = require('.owner');
 */
+const Test = require('./test');
 
 /* Set assocations here
   Owner.hasMany(Dog);
@@ -12,4 +13,5 @@
 module.exports = {
   // Dog,
   // Owner
+  Test,
 };

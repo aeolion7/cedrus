@@ -4,6 +4,7 @@
   "description": "A lightweight full stack boilerplate using Node, Express, React, Redux, and Sequelize.",
   "main": "./client/app.js",
   "scripts": {
+    "seed": "node server/seed.js",
     "start": "node server",
     "start-dev": "webpack -w & nodemon server/app.js",
     "test": "test"
