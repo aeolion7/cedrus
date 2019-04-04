@@ -4,6 +4,7 @@ const path = require('path');
 const volleyball = require('volleyball');
 const bodyParser = require('body-parser');
 const db = require('./db');
+const { green } = require('chalk');
 const PORT = 3000;
 
 const createApp = () => {
@@ -33,7 +34,8 @@ const startListening = () => {
   });
 };
 
-const syncDb = () => db.sync().then(() => console.log('Database synced!'));
+const syncDb = () =>
+  db.sync().then(() => console.log(green('Database synchronized!')));
 
 async function bootApp() {
   await syncDb();

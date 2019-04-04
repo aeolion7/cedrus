@@ -1,9 +1,10 @@
 const db = require('./db');
 const { Test } = require('./db/models/index');
+const { green, yellow, red } = require('chalk');
 
 async function seed() {
   await db.sync({ force: true });
-  console.log('Database synchronization complete.');
+  console.log(green('Database synchronization complete.'));
 
   const tests = await Promise.all([
     Test.create({
@@ -24,7 +25,7 @@ async function seed() {
     }),
   ]);
 
-  console.log(`Seeding complete.`);
+  console.log(green(`Seeding complete.`));
 }
 
 async function runSeed() {
@@ -32,12 +33,13 @@ async function runSeed() {
   try {
     await seed();
   } catch (err) {
+    console.log(red('Error seeding database!'));
     console.error(err);
     process.exitCode = 1;
   } finally {
-    console.log('Closing database connection...');
+    console.log(yellow('Closing database connection...'));
     await db.close();
-    console.log('Database connection closed.');
+    console.log(green('Database connection closed.'));
   }
 }
 
