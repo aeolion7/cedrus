@@ -5,7 +5,7 @@
   "main": "./client/app.js",
   "scripts": {
     "seed": "node server/seed.js",
-    "start": "node server",
+    "start": "node server/app.js",
     "start-dev": "webpack -w & nodemon server/app.js",
     "test": "test"
   },

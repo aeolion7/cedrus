@@ -4,4 +4,5 @@
   from its own file.
 */
 
+export { default as App } from './App';
 export { default as HelloWorld } from './HelloWorld';
