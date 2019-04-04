@@ -19,10 +19,6 @@ async function seed() {
       count: 3,
       name: 'Test 3',
     }),
-    Test.create({
-      count: 4,
-      name: 'Test 4',
-    }),
   ]);
 
   console.log(green(`Seeding complete.`));
