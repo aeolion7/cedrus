@@ -13,7 +13,9 @@ be done before the application can be built out:
    In addition, the name of the database must be set as the name property in the
    `package.json` file in the root application directory.
 2. The database models must also be defined (in `/server/db/models/`) and the
-   associations must be set (in `/server/db/models/index.js`)
+   associations must be set (in `/server/db/models/index.js`). Currently, a
+   `Test` model is currently defined (in `/server/db/models/test.js`), and
+   should be removed before building an application using this boilerplate.
 3. A connected Redux store is currently set up, but there are no action
    constants or action creators. The initial state is empty and the reducer
    currently only returns the passed-in state argument, and so these must all be
