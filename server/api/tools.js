@@ -21,14 +21,7 @@ router.get('/:id', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
   try {
-    const {
-      name,
-      status,
-      pictureUrl,
-      description,
-      features,
-      loanDuration,
-    } = req.body;
+    const { name, status, pictureUrl, description, features } = req.body;
 
     const newTool = {
       name,
@@ -36,7 +29,6 @@ router.post('/', async (req, res, next) => {
       pictureUrl,
       description,
       features,
-      loanDuration,
       borrowQueue: [],
     };
 
