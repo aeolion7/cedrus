@@ -19,4 +19,55 @@ router.get('/:id', async (req, res, next) => {
   }
 });
 
+router.post('/', async (req, res, next) => {
+  try {
+    const {
+      name,
+      status,
+      pictureUrl,
+      description,
+      features,
+      loanDuration,
+    } = req.body;
+
+    const newTool = {
+      name,
+      status,
+      pictureUrl,
+      description,
+      features,
+      loanDuration,
+      borrowQueue: [],
+    };
+
+    const createdTool = Tool.create(newTool);
+    res.json(createdTool);
+  } catch (error) {
+    next(error);
+  }
+});
+
+// stretch goal: request to be added to tool's borrow queue
+// router.put('/:id', async (req, res, next) => {
+//   try {
+//     const thisTool = await Tool.findByPk(req.params.id);
+//     const { borrowerId } = req.body;
+//     const toolQueue = thisTool.borrowQueue;
+
+//     // add borrowerId to tool borrow queue
+//     toolQueue.push(borrowerId);
+
+//     if (toolQueue.length) {
+//       const newTool = await thisTool.update({
+//         borrowQueue: toolQueue,
+//       });
+//       res.json(newTool);
+//     } else {
+
+//     }
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+
 module.exports = router;

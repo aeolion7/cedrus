@@ -21,7 +21,7 @@ const Tool = db.define('tool', {
   description: Sequelize.TEXT,
   features: Sequelize.ARRAY(Sequelize.TEXT),
   loanDuration: Sequelize.INTEGER,
-  loanedUserId: Sequelize.INTEGER,
+  borrowQueue: Sequelize.ARRAY(Sequelize.INTEGER),
 });
 
 module.exports = Tool;
