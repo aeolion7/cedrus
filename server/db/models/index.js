@@ -1,17 +1,10 @@
-/* Be sure to import your models here.
-  const Dog = require('./dog');
-  const Owner = require('.owner');
-*/
-const Test = require('./test');
+const User = require('./users');
+const Tool = require('./tools');
 
-/* Set assocations here
-  Owner.hasMany(Dog);
-  Dog.belongsTo(Owner);
-*/
+User.hasMany(Tool);
+Tool.belongsTo(User);
 
-// Export the updated models with associations
 module.exports = {
-  // Dog,
-  // Owner
-  Test,
+  User,
+  Tool,
 };
