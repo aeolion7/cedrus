@@ -46,6 +46,7 @@ async function seed() {
       features: ['sturdy', 'metal'],
       loanDuration: 0,
       userId: 2,
+      borrowQueue: [],
     }),
 
     Tool.create({
@@ -59,7 +60,7 @@ async function seed() {
       features: ['sturdy', 'magnetic'],
       loanDuration: 5,
       userId: 1,
-      loanedUserId: 3,
+      borrowQueue: [3],
     }),
 
     Tool.create({
@@ -73,7 +74,7 @@ async function seed() {
       features: ['electronic', 'name-brand'],
       loanDuration: 12,
       userId: 3,
-      loanedUserId: 2,
+      borrowQueue: [2, 1],
     }),
   ]);
 

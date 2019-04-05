@@ -26,7 +26,7 @@ const User = db.define('user', {
     allowNull: false,
   },
   radiusInMiles: {
-    type: Sequelize.FLOAT,
+    type: Sequelize.INTEGER,
     allowNull: false,
   },
 });
