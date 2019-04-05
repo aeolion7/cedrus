@@ -1,5 +1,5 @@
 {
-  "name": "nerd-plate",
+  "name": "cedrus",
   "version": "1.0.0",
   "description": "A lightweight full stack boilerplate using Node, Express, React, Redux, and Sequelize.",
   "main": "./client/app.js",
